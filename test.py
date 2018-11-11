@@ -1,6 +1,6 @@
 from scd30_modbus import SCD30_Modbus
 from time import sleep
-from os import system
+from os import system, name
 
 def clearScreen():
     
@@ -12,7 +12,7 @@ def clearScreen():
 
 def run_sync_client():
 
-    system('clear')
+    clearScreen()
 
     sensor = SCD30_Modbus('/dev/ttyAMA0')
 
